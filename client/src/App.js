@@ -17,22 +17,20 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.callApi = this.callApi.bind(this);
   }
   
 
-  componentDidMount() {
-    this.callApi()
-      .then(response => console.log(response))
-      .then(res => this.setState({ response: res.express }))
-      .then(console.log(this.state.response))
-      .catch(err => console.log(err));
+  componentWillMount = async () => {
+    var data = await this.callApi();
+    console.log(data)
+    this.setState({users : data})
+    this.setState({loaded: true})
   }
 
   callApi = async () => {
-    axios.get('/allUsers')
-    .then(function (response) {
-      console.log(response, response.data);
-    })
+    let userData = await axios.get('/allUsers')
+    return userData.data;
   };
 
   handleChange(event) {
@@ -53,14 +51,25 @@ class App extends Component {
     event.preventDefault();
   }
 
+  /*
+
+  <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+
+  */
 
   render() {
-    if(this.state.users.length) {
+    if(this.state.loaded) {
       return (
         <div className="App"> 
-        {this.state.response.map(user =>
-                (<div>
-                  {user[0]}
+        {this.state.users.map(user =>
+                (<div key={user.id}>
+                  {`${user.firstName}` + ', ' +  `${user.lastName}`}
                   </div>))}
         </div>
       );
@@ -68,13 +77,7 @@ class App extends Component {
     else {
       return (
         <div className="App">
-           <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
+           <div>loading</div>
         </div>
       );
     }

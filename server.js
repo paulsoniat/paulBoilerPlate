@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -27,9 +26,10 @@ app.post('/user', (req, res) => {
   dbHelpers.createUser(req, res)
 })
 
-app.get('/allUsers', (req, res) => {
-  dbHelpers.findAllUsers()
+app.get('/allUsers', async (req, res) => {
+  await dbHelpers.findAllUsers()
   .then((response) => {
+    console.log("in all users then")
     res.send(response)
   })
 })
