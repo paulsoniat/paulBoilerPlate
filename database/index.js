@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-// connect to cloud db
 const sequelize = new Sequelize(process.env.db_uri);
 
 sequelize
