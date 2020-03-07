@@ -6,19 +6,15 @@ class Login extends Component {
     super(props);
     this.state = {
     };
-    this.loginUser.bind(this);
-  }
-
-  loginUser = () => {
-    console.log('hey')
-    axios.get('/auth/google').then(res => {
-      console.log(res)
-    })
   }
 
   render() {
     return (
-      <button width='100px' onClick={this.loginUser}>Create User</button>
+      
+      <div className={"mainContainer"}>
+        <a href="http://localhost:5000/auth/google">Facebook Login</a>
+      </div>
+
     )
   }
 }

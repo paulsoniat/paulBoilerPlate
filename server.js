@@ -67,7 +67,8 @@ passport.use(new GoogleStrategy({
 //   redirecting the user to google.com.  After authorization, Google
 //   will redirect the user back to this application at /auth/google/callback
 app.get('/auth/google',
-  passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
+  passport.authenticate('google', { scope: ['profile', 'email'],
+  prompt: 'select_account' }));
 
 // GET /auth/google/callback
 //   Use passport.authenticate() as route middleware to authenticate the
@@ -75,18 +76,19 @@ app.get('/auth/google',
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
 app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
+  passport.authenticate('google', { successReturnToOrRedirect: 'http://localhost:3000/home', failureRedirect: '/login' }),
   function(req, res) {
     console.log('in the passport auth')
     return res.status(200).json({
       success:true,
-      redirectUrl: '/home'
+      redirectUrl: 'http://localhost:3000/home'
   })
   });
 
 
 app.get('/hey', (req, res) => {
-  res.send('hey')
+  console.log("in the hey reqquest")
+  res.redirect(200, 'http://localhost:3000/home')
 })
 
 

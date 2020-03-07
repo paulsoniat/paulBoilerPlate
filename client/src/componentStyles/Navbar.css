@@ -1,0 +1,6 @@
+.navBar {
+    height: 100vh;
+    width: 5rem;
+    background-color: blue;
+    position: fixed
+}
