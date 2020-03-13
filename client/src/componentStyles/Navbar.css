@@ -1,6 +1,58 @@
-.navBar {
+.navbar {
     height: 100vh;
     width: 5rem;
-    background-color: blue;
-    position: fixed
+    background-color: #ABA8B4;
+    position: fixed;
+    transition: 200ms ease;
+}
+
+.nav-link:last-of-type {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: #DECDF5;
+    color: rgb(231, 69, 210);
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+
+.navbar:hover .link-text {
+    display: block;
+}
+
+.fa-primary {
+    color: pink;
+}
+
+.fa-secondary {
+    color: orangered
+}
+
+.fa-primary, 
+.fa-secondary {
+    transition: 600ms;
 }

@@ -10,8 +10,6 @@ import Login from './components/Login'
 
 import Home from './components/Home'
 
-import Test from './components/Test'
-
 export default function App() {
   return (
     <Router>
