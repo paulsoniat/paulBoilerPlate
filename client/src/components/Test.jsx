@@ -9,7 +9,7 @@ class Test extends Component {
 
   render() {
       return (
-          <div>Test</div>
+          <div>Test1</div>
       )
   }
 }

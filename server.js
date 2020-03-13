@@ -3,9 +3,11 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
+const request = require('request');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const Ebay = require('ebay-node-api');
 
-var passport = require('passport');
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 
 const db = require('./database/index.js')
@@ -36,6 +38,27 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
+
+let ebay = new Ebay({
+  clientID: 'PaulSoni-jobdemo-SBX-a69eabc60-ce01c235',
+  clientSecret: 'SBX-69eabc609347-c335-48ad-baee-f510',
+  body: {
+      grant_type: 'client_credentials',
+  //you may need to define the oauth scope
+  scope: 'https://api.ebay.com/oauth/api_scope'
+  }
+});
+
+const body = {
+  token: 'CfdD9cml4xbioXqAleCchw',
+  data: {
+    stringShort: 'stringShort',
+    stringLong: 'stringLong',
+    stringCharacters: 'stringCharacters',
+    stringDigits: 'stringDigits',
+    stringAlphaNum: 'stringAlphaNum',
+    stringWords: 'stringWords'
+}};
 
 const GOOGLE_CLIENT_ID= process.env.GOOGLE_CLIENT_ID;
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
@@ -84,6 +107,32 @@ app.get('/auth/google/callback',
       redirectUrl: 'http://localhost:3000/home'
   })
   });
+ 
+/*app.post(
+  'https://app.fakejson.com/q',
+  {json: body},
+  function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      console.log(body)
+    }
+  }
+);*/
+
+app.post('/search', (req, res) => {
+  ebay.getAccessToken()
+    .then((data) => {
+        ebay.searchItems({
+            keyword: 'drone',
+            limit: '3'
+        }).then((data) => {
+            console.log(data);
+            // Data is in format of JSON
+            // To check the format of Data, Go to this url (https://developer.ebay.com/api-     docs/buy/browse/resources/item_summary/methods/search#w4-w1-w4-SearchforItemsbyKeyword-0)
+        })
+    });
+
+
+})
 
 
 app.get('/hey', (req, res) => {
