@@ -9,29 +9,33 @@ class Navbar extends React.Component {
                 
                     <a href="/home" className="nav-link">
                         <i className="fas fa-home"></i>
-                        <span className= {"link-text"}>Home</span>
+                        <span className= {"link-text"}></span>
                     </a>
 
-                    <a href="/test1" className="nav-link">
+                    <a href="/portfolio" className="nav-link">
                         <i className="fas fa-infinity"></i>
-                        <span className= {"link-text"}>Shop</span>
+                        <span className= {"link-text"}>Portfolio</span>
                     </a>
 
                     <a href="/home" className="nav-link">
                         <i className="fas fa-gem"></i>
-                        <span className= {"link-text"}>Cart</span>
+                        <span className= {"link-text"}>About</span>
                     </a>
 
-                    <a href="/home" className="nav-link">
+                    <a href="/blog" className="nav-link">
                         <i className="fas fa-user-astronaut"></i>
-                        <span className= {"link-text"}>Settings</span>
+                        <span className= {"link-text"}>Blog</span>
                     </a>
 
-                    <a href="/home" className="nav-link" >
+                    <a href="/Resume%20-%20Paul%20Soniat.pdf" className="nav-link" >
                         <i className="fas fa-meteor"></i>
-                        <span className= {"link-text"}>Other</span>
+                        <span className= {"link-text"}>Resume</span>
                     </a>
 
+                    <a href="mailto:paulmsoniat@gmail.com?Subject=Paulsoniat.com Contact" className="nav-link" >
+                        <i className="fas fa-envelope-open-text"></i>
+                        <span className={"link-text"}>Email Me</span>
+                    </a>
 
         </nav>
       )

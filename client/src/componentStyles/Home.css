@@ -1,5 +1,27 @@
 .homeContainer {
-    background-color: #534D56;
     margin-left: 5rem;
-    color: #ABA8B4
+    color: #ABA8B4;
+    background-size: cover;
+    background-color: #534D56;
   }
+
+  @import 'https://fonts.googleapis.com/css?family=Roboto';
+
+p>a {
+	color: #fd084a;
+}
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+}
+.flex {
+	display: flex;
+}
+.header-sub-title {
+  color: #fff;
+  font-family: "Courier";
+  font-size: 20px;
+  padding: 0.1em;
+}

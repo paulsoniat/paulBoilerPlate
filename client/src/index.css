@@ -3,6 +3,8 @@ body {
   padding: 0;
   font-family: 'Tangerine', serif;
   font-size: 28px;
+  background-size: cover;
+  background-color: #534D56;
 }
 
 body::-webkit-scrollbar {

@@ -1,0 +1,50 @@
+.portfolioContainer {
+    margin-left: 5rem;
+    color: #ABA8B4;
+    background-size: cover;
+    background-color: #534D56;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.rowContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(to right, red, purple);
+  padding: 0.5em;
+  width: 100%;
+
+}  
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+    
+    align-items: center;
+}     
+
+.titleContainer:hover {
+    background-color: #534D56;
+}
+
+.titleContainer{
+    flex: 1 0 auto;
+    overflow-wrap: break-word;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    background-color: linear-gradient(to right, red, purple);
+   -webkit-transition: background-color 2s ease-out;
+   -moz-transition: background-color 2s ease-out;
+   -o-transition: background-color 2s ease-out;
+   transition: background-color 2s ease-out;
+   width: 100%;
+}
+
+.projectButton{
+    background-color: beige;
+    color: darkmagenta;
+}
+
