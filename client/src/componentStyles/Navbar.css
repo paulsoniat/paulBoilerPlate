@@ -4,6 +4,7 @@
     background-color: #ABA8B4;
     position: fixed;
     transition: 200ms ease;
+    font-family: 'Lato', sans-serif
 }
 
 .nav-link:last-of-type {

@@ -17,23 +17,21 @@ class Project extends Component {
       <div >
         <Navbar/>
         <div className={"homeContainer"}>
-          <div className={"projectTitle"}> 
-            DXC Drive {this.props.title}
-            <div className={"descriptionText"}>
-            Partnering with the Indy Car racing team of Penske to create a fan engagement tool for end users to race Penske drivers in real time during the DXC 600 Indy Car Race.
-            {this.props.description}
-            </div>
+          <div> 
+            <img id="dxcDrive" src={this.props.assets[9]} alt="DXC Drive "/>
+            
           </div>
           <div classname={"textWrapper"}>
-            <div className={"briefTitle"}>
-              {this.props.briefText}
-              The Solution 
+            <div id="problemTitle" className={"briefTitle"}>
+              {this.props.briefTitle}
+              The Problem
             </div>
-            <div className={"briefText"}>
+            <div  className={"briefText"}>
               {this.props.briefText}
-              Partnering with the Indy Car racing team of Penske to create a fan engagement tool for end users to race Penske drivers in real time during the DXC 600 Indy Car 
+              Penske wanted to increase fan engagement, brand awareness, and Indy Car driver personalities through an application during the DXC 600 Indy Car race
             </div>
           </div>
+            
           <div className={"pictureWrapper"}>
             <Picture_Frame directionPic="left" directionText="right" asset={this.props.assets[7]} />
           </div>

@@ -27,8 +27,9 @@ const drive6 = require('../src/assets/driveAssets/Drive6.PNG');
 const drive7 = require('../src/assets/driveAssets/Drive7.PNG');
 const drive8 = require('../src/assets/driveAssets/Drive8.PNG');
 const drive9 = require('../src/assets/driveAssets/Drive9.PNG');
+const driveLogo = require('../src/assets/driveAssets/DriveLogo.PNG')
 
-const drivePictures = [drive1, drive2, drive3, drive4, drive5, drive6, drive7, drive8, drive9]
+const drivePictures = [drive1, drive2, drive3, drive4, drive5, drive6, drive7, drive8, drive9, driveLogo]
 
 export default function App() {
   console.log(dxcDrive)

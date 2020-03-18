@@ -4,18 +4,18 @@
     width: 80vw;
     height: 25vh;
     max-height: 25%;
-    padding-top: 5rem;
-    font-size: 3rem;
+    font-size: 7rem;
     overflow: none;
-    border-radius: 7rem;
+    border-radius: 12rem;
     border-color: black;
-    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.05),
-                40px 20px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: -10px -10px 20px whitesmoke,
+                40px 20px 40px whitesmoke;
     display:inline-block;
-    box-shadow:-5px -5px 10px whitesmoke,
+    box-shadow:-5px -5px 10px whitesmoke ,
                5px 5px 15px whitesmoke
 } 
 .descriptionText{
+    margin-top: 2rem;
     font-size: 1.5rem;
 }
 
@@ -51,5 +51,18 @@
     padding: 5rem;
     margin-left: 1rem;
     text-align: center;
-    width: 33%
+    width: 33%;
+    overflow-wrap: break-word;
+    
+    align-items: center;
+    text-align: center;
+    align-content: center;
+   flex: 1 0 auto;
+}
+
+#dxcDrive {
+    border-radius: 12rem;
+    border-color: black;
+    box-shadow: -10px -10px 20px whitesmoke,
+                40px 20px 40px whitesmoke;
 }

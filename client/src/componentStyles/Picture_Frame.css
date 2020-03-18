@@ -93,4 +93,6 @@ img {
     max-width: 33vw;
     margin: auto;
     margin-left: 10vw;
+    overflow: hidden;
+    position: relative;
   }

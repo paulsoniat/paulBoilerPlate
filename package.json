@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Example on using create-react-app with a Node Express Backend",
   "author": {
-    "name": "Esau Silva",
-    "email": "esausilva85@gmail.com",
-    "url": "https://esausilva.com"
+    "name": "Paul Soniat",
+    "email": "paulmsoniat@gmail.com",
+    "url": ""
   },
   "license": "MIT",
   "scripts": {
@@ -13,7 +13,7 @@
     "heroku-client-build": "cd client && yarn install && cd ../ && yarn heroku-dev",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "heroku-dev": "\"yarn server\" \"yarn client\"",
+    "heroku-dev": "yarn server",
     "heroku-postbuild": "yarn install && yarn heroku-client-build"
   },
   "dependencies": {
