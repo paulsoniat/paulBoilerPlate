@@ -12,7 +12,7 @@
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "yarn install && yarn dev"
+    "heroku-postbuild": "yarn install && yarn client"
   },
   "dependencies": {
     "axios": "^0.18.0",
