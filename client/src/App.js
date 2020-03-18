@@ -50,7 +50,7 @@ export default function App() {
             <Project name={dxcDrive.name} assets={drivePictures}  />
           </Route>
           <Route path="/">
-            <Login />
+            <Home />
           </Route>
         </Switch>
     </Router>
