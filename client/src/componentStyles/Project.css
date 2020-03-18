@@ -1,0 +1,55 @@
+.projectTitle{
+    text-align: center;
+    flex-direction: row;
+    width: 80vw;
+    height: 25vh;
+    max-height: 25%;
+    padding-top: 5rem;
+    font-size: 3rem;
+    overflow: none;
+    border-radius: 7rem;
+    border-color: black;
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.05),
+                40px 20px 40px rgba(0, 0, 0, 0.05);
+    display:inline-block;
+    box-shadow:-5px -5px 10px whitesmoke,
+               5px 5px 15px whitesmoke
+} 
+.descriptionText{
+    font-size: 1.5rem;
+}
+
+.briefTitle {
+    display:inline-block;
+    border-radius: 7rem;
+    border-color: black;
+    align-self: left;
+    margin-top: 5rem;
+    flex-direction: column;
+    height: 18vh;
+    max-height: 18vh;
+    padding: 5rem;
+    margin-left: 1rem;
+    text-align: center;
+    width: 33%;
+    font-size: 5rem;
+    
+}
+
+
+.briefText {
+    box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.05),
+                inset 40px 20px 40px rgba(0, 0, 0, 0.05);
+    display:inline-block;
+    border-radius: 7rem;
+    border-color: black;
+    align-self: left;
+    margin-top: 5rem;
+    flex-direction: column;
+    height: 18vh;
+    max-height:20%;
+    padding: 5rem;
+    margin-left: 1rem;
+    text-align: center;
+    width: 33%
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../componentStyles/Button.css'
 
-class Login extends Component {
+class Button extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,18 +11,18 @@ class Login extends Component {
   render() {
     return (
       <div id="wrapper">
-      <a href="#" class="my-super-cool-btn">
-        <div class="dots-container">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+      <a href={this.props.href} className="my-super-cool-btn">
+        <div className="dots-container">
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
+          <div className="dot"></div>
         </div>
-        <span>Go!</span>
+        <span>{this.props.text}</span>
       </a>
     </div>
     )
   }
 }
 
-export default Login;
+export default Button;

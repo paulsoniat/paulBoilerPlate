@@ -3,6 +3,8 @@
     color: #ABA8B4;
     background-size: cover;
     background-color: #534D56;
+    text-align: center;
+    padding-top: 2.5rem;
   }
 
   @import 'https://fonts.googleapis.com/css?family=Roboto';
