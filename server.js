@@ -25,7 +25,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
+/*
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -107,7 +107,7 @@ app.get('/auth/google/callback',
       redirectUrl: 'http://localhost:3000/home'
   })
   });
- 
+ */
 /*app.post(
   'https://app.fakejson.com/q',
   {json: body},
@@ -117,6 +117,17 @@ app.get('/auth/google/callback',
     }
   }
 );*/
+
+if (process.env.NODE_ENV === "production") {
+
+  app.use(express.static("build"));
+
+
+  app.get("*", (req, res) => {
+       res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+   });
+
+ }
 
 app.post('/search', (req, res) => {
   ebay.getAccessToken()
