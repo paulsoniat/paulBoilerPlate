@@ -10,9 +10,10 @@
   "license": "MIT",
   "scripts": {
     "client": "cd client && yarn start",
-    "heroku-client-build": "cd client && yarn install && cd ../ && yarn dev",
+    "heroku-client-build": "cd client && yarn install && cd ../ && yarn heroku-dev",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "heroku-dev": "\"yarn server\" \"yarn client\"",
     "heroku-postbuild": "yarn install && yarn heroku-client-build"
   },
   "dependencies": {
