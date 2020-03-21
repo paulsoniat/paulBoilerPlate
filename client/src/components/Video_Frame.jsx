@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import { Player } from 'video-react';
 import '../componentStyles/Picture_Frame.css'
 import drive2 from '../assets/driveAssets/Drive2.PNG'
 
-import '../componentStyles/Project.css'
+
+import '../componentStyles/Video_Frame.css'
+
+import YouTube from '@u-wave/react-youtube';
 
 class Picture_Frame extends Component {
   constructor(props) {
@@ -18,13 +22,20 @@ class Picture_Frame extends Component {
       return (
       
         <div className={"pictureWrapper"}>
-          
-          <div className={`${rightOrLeftText}HalfText`}>
+
+          <div className={`${rightOrLeftText}HalfTextVideo`}>
               {this.props.asset.briefText}
           </div>
-
-            <img id={`${rightOrLeftPic}HalfPicture`} src={this.props.asset.picture} alt={"drive2"}></img>
-          
+          <div className={`${rightOrLeftPic}HalfVideo`}>
+            <YouTube 
+            width={425}
+            height={550}
+            volume={0}
+            video="h8jOsnGPHGs"
+            autoplay
+            />
+          <div/>
+        </div>
         </div>
       )
     }
@@ -32,10 +43,18 @@ class Picture_Frame extends Component {
     return (
       
       <div className={"pictureWrapper"}>
-        
-          <img id={`${rightOrLeftPic}HalfPicture`} src={this.props.asset.picture} alt={"drive2"}></img>
 
-          <div className={`${rightOrLeftText}HalfText`}>
+         <div className={`${rightOrLeftPic}HalfVideo`}>
+            <YouTube 
+            width={425}
+            height={550}
+            volume={0}
+            video="h8jOsnGPHGs"
+            autoplay
+            />
+          <div/>
+        </div>
+          <div className={`${rightOrLeftText}HalfTextVideo`}>
               {this.props.asset.briefText}
               
             </div>

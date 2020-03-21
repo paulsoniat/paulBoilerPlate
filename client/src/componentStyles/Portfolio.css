@@ -1,10 +1,12 @@
 .portfolioContainer {
     margin-left: 5rem;
-    color: #ABA8B4;
+    color: rgba(0, 0, 0, .85);
     background-size: cover;
     background-color: #534D56;
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Inter','Lato', sans-serif;
+    font-size: 1.8rem;
   }
 
 .rowContainer{
@@ -14,6 +16,8 @@
     background-color: #534D56;
   padding: 0.5em;
   width: 100%;
+  background-image: radial-gradient(farthest-corner at 40px 40px,
+    gray 0%, whitesmoke 100%)
 
 }  
 .textContainer{
@@ -30,8 +34,8 @@
     
     background-color: #DECDF5;
     border-radius: 7rem;
-    box-shadow:-5px -5px 10px whitesmoke,
-               5px 5px 15px whitesmoke
+    box-shadow:-5px -5px 10px black,
+               5px 5px 15px black
 }
 
 .titleContainer{
@@ -55,8 +59,8 @@
    margin-bottom: 7rem;
    border-radius: 7rem;
    border-color: black;
-    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.05),
-                40px 20px 40px rgba(0, 0, 0, 0.05)
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.308),
+                40px 20px 40px rgba(255, 255, 255, 0.308)
 }
 
 .projectButton{

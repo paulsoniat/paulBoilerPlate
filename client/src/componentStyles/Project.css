@@ -33,8 +33,10 @@
     text-align: center;
     width: 33%;
     font-size: 5rem;
-    
+    color: rgba(0, 0, 0, .85);
+    opacity: .9
 }
+
 
 
 .briefText {
@@ -46,10 +48,9 @@
     align-self: left;
     margin-top: 5rem;
     flex-direction: column;
-    height: 18vh;
-    max-height:20%;
+    max-height:18vh;
     padding: 5rem;
-    margin-left: 1rem;
+    margin-left: 2.5rem;
     text-align: center;
     width: 33%;
     overflow-wrap: break-word;
@@ -58,6 +59,8 @@
     text-align: center;
     align-content: center;
    flex: 1 0 auto;
+   color: rgba(0, 0, 0, .85);
+    opacity: .9
 }
 
 #dxcDrive {
@@ -65,4 +68,8 @@
     border-color: black;
     box-shadow: -10px -10px 20px whitesmoke,
                 40px 20px 40px whitesmoke;
+}
+
+#videoLogo {
+    height: 27.5vh
 }
